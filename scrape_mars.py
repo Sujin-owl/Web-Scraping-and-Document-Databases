@@ -45,6 +45,7 @@ def scrape():
 # ### Go to next page with FULL IMAGE link
 
     browser.click_link_by_partial_text('FULL IMAGE')
+    time.sleep(2)
 
 # ### Go to large size image link 
 
@@ -116,6 +117,6 @@ def scrape():
         hemisphere_image_urls.append({"title": image_title, "image_url": full_url})
         browser.back()
     # return data
-    mars_data = {"News_Title":news_title, "News_Paragraph":news_p, "Featured Image URL":featured_image_url,"Mars_Weather":mars_weather, "HTML_Table":html_table, "Hemisphere Image URLs":hemisphere_image_urls}
+    mars_data = {"News_Title":news_title, "News_Paragraph":news_p, "Featured_Image_URL":featured_image_url,"Mars_Weather":mars_weather, "HTML_Table":html_table, "Hemisphere_Image_URLs":hemisphere_image_urls}
     return mars_data
 
